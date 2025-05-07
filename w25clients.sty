@@ -1,0 +1,103 @@
+w25clients$ uploadf ft.c ~S1/finalfold
+S1: File stored in S1
+w25clients$ uploadf ft.zip ~S1/finalfold
+S1: File saved in S1
+
+w25clients$ uploadf ft.txt ~S1/finalfold
+S1: File saved in S1
+
+w25clients$ dispfnames ~s1/finalfold
+📂 Files in directory (grouped by type):
+ft.c
+ft.txt
+ft.zip
+
+w25clients$ uploadf ft.pdf ~S1/finalfold
+S1: File saved in S1
+
+w25clients$ dispfnames ~S1/finalfold
+📂 Files in directory (grouped by type):
+ft.c
+ft.pdf
+ft.txt
+ft.zip
+
+w25clients$ uploadf ~S1/finalfold/temp/ft.txt
+Invalid syntax. Use: uploadf <filename> <dest_path>
+w25clients$ uploadf ft.txt ~S1/finalfold/temp/ft.txt
+S1: File saved in S1
+
+w25clients$ dispfnames ~S1/finalfold/temp
+❌ No files found.
+
+w25clients$ dispfnames ~S1/finalfold/temp/ft.txt
+📂 Files in directory (grouped by type):
+ft.txt
+
+w25clients$ uploadf ft.zip ~S1/finalfold1
+S1: File saved in S1
+
+w25clients$ dispfnames ~S1/finalfold1
+📂 Files in directory (grouped by type):
+ft.zip
+
+w25clients$ downlf ~S1/final
+File not found or error fetching file.
+w25clients$ downcsc
+S1 response: OK from S1
+w25clients$ downlf ~S1/finalfold/ft.txt
+✅ File 'ft.txt' downloaded successfully (18 bytes)
+w25clients$ downlf ~S1/finalfold/ft.zip
+✅ File 'ft.zip' downloaded successfully (18 bytes)
+w25clients$ downlf ~S1/finalfold/ft.c
+✅ File 'ft.c' downloaded successfully (18 bytes)
+w25clients$ downlf ~S1/finalfold/ft.pdf
+✅ File 'ft.pdf' downloaded successfully (18 bytes)
+w25clients$ downltar ~S1/
+Unsupported filetype for downltar
+w25clients$ downltar .txt
+✅ Tarball 'text.tar' downloaded (10240 bytes)
+w25clients$ downltar .c
+✅ Tarball 'cfiles.tar' downloaded (10240 bytes)
+w25clients$ downltar .pdf
+✅ Tarball 'pdf.tar' downloaded (2232320 bytes)
+w25clients$ downltar .zip
+Unsupported filetype for downltar
+w25clients$ remove ~S1/finalfold/ft.zip
+S1 response: OK from S1
+w25clients$ removef ~S1/finalfold/ft.zip
+S1: You can not remove .zip fi
+w25clients$ removef ~S1/finalfolder/ft.zip
+S1: You can't remove this file
+w25clients$ removef ~S1/finalfolder/ft.txt
+File not found or error fetching file.
+w25clients$ dispfnames ~S1/finalfold/ft.txt
+📂 Files in directory (grouped by type):
+/home/vyas46/S3/finalfold/ft.txt
+
+w25clients$ removef ~S1/finalfold/ft.txt
+S1: File deleted from S1
+
+w25clients$ removef ~s1/finalfold/ft.pdf
+S1: File deleted from S1
+
+w25clients$ dispfnames ~S1/finalfold
+📂 Files in directory (grouped by type):
+ft.c
+ft.zip
+
+w25clients$ removef ~S1/finalfold/ft.c
+S1: File deleted from S1
+
+w25clients$ removef ~S1/finalfold/ft.zip
+S1: You can't remove this file
+w25clients$ uploadf ft.c ~S1/finalfold
+S1: File stored in S1
+w25clients$ uploadf ft1.c ~S1/finalfold
+S1: File stored in S1
+w25clients$ dispfnames ~S1/finalfold
+📂 Files in directory (grouped by type):
+ft1.c
+ft.c
+ft.zip
+
